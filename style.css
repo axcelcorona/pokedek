@@ -40,11 +40,16 @@ img {
 /* ====================== header ====================== */
 
 .navbar__container {
+  top: 0;
+  left: 0;
   width: 100vw;
+  z-index: 1;
   height: 130px;
-  background-color: var(--primary-color);
   display: flex;
+  position: sticky;
   align-items: center;
+  margin-bottom: 100px;
+  background-color: var(--primary-color);
 }
 
 .navbar {
@@ -72,4 +77,56 @@ img {
   border: none;
   outline: none;
   color: var(--secondary-color-dark);
+}
+
+/* ====================== card ====================== */
+
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.card {
+  width: 310px;
+  height: 350px;
+  display: flex;
+  overflow: hidden;
+  isolation: isolate;
+  position: relative;
+  border-radius: 1rem;
+  padding-block: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  text-transform: uppercase;
+  background-color: #ffff;
+  box-shadow: 0 0 3rem -1rem rgb(0 0 0 / 25%);
+}
+
+.card__header-title {
+  left: 55%;
+  top: 1.5rem;
+  z-index: -1;
+  font-size: 7rem;
+  font-weight: 800;
+  position: absolute;
+  color: var(--bg-color-lighte);
+  transform: translateX(-50%);
+}
+
+.card__header-img {
+  width: 200px;
+  align-self: center;
+  margin: 0 auto;
+  display: flex;
+  padding-inline: 1rem;
+  justify-content: center;
+}
+
+.card__body {
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
 }
